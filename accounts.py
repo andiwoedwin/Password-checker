@@ -1,6 +1,7 @@
 
 
 class Accounts:
+    account_names = []
     def __init__(self, first_name, last_name, user_name, password):
 
         '''
@@ -14,8 +15,8 @@ class Accounts:
 
 #     user_accounts = []
 
-#     def save_account(self):
-#         Accounts.user_accounts.append(self)
+    def save_account(self):
+        Accounts.account_names.append(self)
     
 #     def delete_account(self):
 #         Accounts.user_accounts.remove(self)
