@@ -22,7 +22,7 @@ class Account:
     def delete_account(self):
 
         '''
-        delete_account method deletes a saved account from the account_list
+        delete_account method deletes a saved account from the account_list.
         '''
 
         Account.account_list.remove(self)
@@ -45,7 +45,7 @@ class Account:
     @classmethod
     def account_exist(cls,number):
         '''
-        Method that checks if a account exists from the account list.
+        Method that checks if account exists from the account_list.
         Args:
             number: Phone number to search if it exists
         Returns :
