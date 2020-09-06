@@ -3,7 +3,7 @@ from account import Account
 
 def create_account(fname,lname,phone,email):
     '''
-    Function to create a new account
+    Function to create. new account
     '''
     new_account = Account(fname,lname,phone,email)
     return new_account
