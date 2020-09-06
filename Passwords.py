@@ -45,7 +45,7 @@ def main():
     print(f"Hello {user_name}. what would you like to do?")
     print('\n')
     while True:
-                    print("Use these short codes : cc - create a new account, dc - display accounts, fc -find a account, ex -exit the account list ")
+                    print("Follow the following short codes : cna- create a new account, da - display accounts, fa -find a account, ex -exit the account ")
                     short_code = input().lower()
                     if short_code == 'cc':
                             print("New Account")
