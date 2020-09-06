@@ -47,7 +47,7 @@ def main():
     while True:
                     print("Follow the following short codes : cna- create a new account, da - display accounts, fa -find a account, ex -exit the account ")
                     short_code = input().lower()
-                    if short_code == 'cc':
+                    if short_code == 'cna':
                             print("New Account")
                             print("-"*10)
                             print ("First name ....")
@@ -60,9 +60,9 @@ def main():
                             e_address = input()
                             save_accounts(create_account(f_name,l_name,p_number,e_address)) # create and save new account.
                             print ('\n')
-                            print(f"New Account {f_name} {l_name} created")
+                            print(f"{f_name} {l_name} your account has been created")
                             print ('\n')
-                    elif short_code == 'dc':
+                    elif short_code == 'da':
                             if display_accounts():
                                     print("Here is a list of all your accounts")
                                     print('\n')
@@ -75,7 +75,7 @@ def main():
                                     print('\n')
                                     print("You dont seem to have any accounts saved yet")
                                     print('\n')
-                    elif short_code == 'fc':
+                    elif short_code == 'fa':
                             print("Enter the number you want to search for")
                             search_number = input()
                             if check_existing_accounts(search_number):
