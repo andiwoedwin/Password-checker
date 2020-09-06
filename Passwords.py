@@ -68,7 +68,7 @@ def main():
                                     print('\n')
                                     for account in display_accounts():
                                         print(f"Name: {account.first_name} {account.last_name}")
-                                        print(f"Phone number: {ontact.phone_number}")
+                                        print(f"Phone number: {contact.phone_number}")
                                     print(f"Email address: {account.email}")
                                     print('\n')
                             else:
