@@ -16,7 +16,7 @@ class TestAccount(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_account = Account("James","Muriuki","0712345678","james@ms.com") 
+        self.new_account = Account("Andiwo","Edwin","0712248626","andiwoedwin@gmail.com") 
     def tearDown(self):
         '''
         tearDown method that does clean up after each test case has run.
