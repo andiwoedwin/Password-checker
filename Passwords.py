@@ -60,7 +60,7 @@ def main():
                             e_address = input()
                             save_accounts(create_account(f_name,l_name,p_number,e_address)) # create and save new account.
                             print ('\n')
-                            print(f_name + l_name + "your account has been created")
+                            print(f_name  + l_name  + " your account has been created")
                             print ('\n')
                     elif short_code == 'da':
                             if display_accounts():
