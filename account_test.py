@@ -1,6 +1,7 @@
+import pyperclip
 import unittest
 from account import Account 
-import pyperclip
+
 
 class TestAccount(unittest.TestCase):
 
@@ -29,10 +30,10 @@ class TestAccount(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_account.first_name,"James")
-        self.assertEqual(self.new_account.last_name,"Muriuki")
-        self.assertEqual(self.new_account.phone_number,"0712345678")
-        self.assertEqual(self.new_account.email,"james@ms.com")
+        self.assertEqual(self.new_account.first_name,"Andiwo")
+        self.assertEqual(self.new_account.last_name,"Edwin")
+        self.assertEqual(self.new_account.user_account,"0712248626")
+        self.assertEqual(self.new_account.password,"andiwoedwin@gmail.com")
 
     def test_save_account(self):
         '''
@@ -65,7 +66,7 @@ class TestAccount(unittest.TestCase):
 
     def test_find_account_by_number(self):
         '''
-        test to check if we can find a account by phone number and display information
+        test to check if we can find a account by user account and display information
         '''
 
         self.new_account.save_account()
@@ -74,7 +75,7 @@ class TestAccount(unittest.TestCase):
 
         found_account = Account.find_by_number("0711223344")
 
-        self.assertEqual(found_account.email,test_account.email)
+        self.assertEqual(found_account.password,test_account.password)
 
     def test_account_exists(self):
         '''
@@ -87,7 +88,7 @@ class TestAccount(unittest.TestCase):
 
         account_exists = Account.account_exist("0711223344")
 
-        self.assertTrue(account_exists)
+        self.assertFalse(account_exists)
 
     def test_display_all_accounts(self):
         '''
@@ -96,15 +97,15 @@ class TestAccount(unittest.TestCase):
 
         self.assertEqual(Account.display_accounts(),Account.account_list)
 
-    def test_copy_email(self):
+    def test_copy_password(self):
         '''
-        Test to confirm that we are copying the email address from a found account
+        Test to confirm that we are copying the password address from a found account
         '''
 
         self.new_account.save_account()
-        Account.copy_email("0712345678")
+        Account.copy_password("0712345678")
 
-        self.assertEqual(self.new_account.email,pyperclip.paste())
+        self.assertEqual(self.new_account.password,pyperclip.paste())
 
 
 if __name__ == '__main__':
