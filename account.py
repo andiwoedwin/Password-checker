@@ -3,12 +3,12 @@ class Account:
     """
     Class that generates new instances of accounts
     """
-    def __init__(self,first_name,last_name,phone_number,email):
+    def __init__(self,first_name,last_name,user_account,password):
 
         self.first_name = first_name
         self.last_name = last_name
-        self.phone_number = phone_number
-        self.email = email
+        self.user_account = user_account
+        self.password = password
 
     account_list = [] 
     def save_account(self):
@@ -33,13 +33,13 @@ class Account:
         Method that takes in a number and returns a account that matches that number.
 
         Args:
-            number: Phone number to search for
+            number: user account to search for
         Returns :
             Account of person that matches the number.
         '''
 
         for account in cls.account_list:
-            if account.phone_number == number:
+            if account.user_account == number:
                 return account
 
     @classmethod
@@ -47,13 +47,13 @@ class Account:
         '''
         Method that checks if account exists from the account_list.
         Args:
-            number: Phone number to search if it exists
+            number: user account to search if it exists
         Returns :
             Boolean: True or false depending if the account exists
         '''
         for account in cls.account_list:
-            if account.phone_number == number:
-                    return True
+            if account.user_account == number:
+                    return False
 
         return False
 
@@ -65,7 +65,8 @@ class Account:
         return cls.account_list
 
     @classmethod
-    def copy_email(cls,number):
+    def copy_password(cls,number):
         account_found = Account.find_by_number(number)
-        pyperclip.copy(account_found.email)
+        pyperclip.copy(account_found.password)
+        
 
